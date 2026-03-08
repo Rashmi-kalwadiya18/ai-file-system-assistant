@@ -1,0 +1,8 @@
+Ashish Modi
+Software Engineer
+
+Skills:
+Python, Flask, SQL, ML
+
+Experience:
+3 years of backend development using Python APIs.

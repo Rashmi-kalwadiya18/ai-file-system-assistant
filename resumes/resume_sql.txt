@@ -1,0 +1,8 @@
+Rahul Yadav
+Software Engineer
+
+Skills:
+ SQL, AWS
+
+Experience:
+3 years of backend development using SQL.
