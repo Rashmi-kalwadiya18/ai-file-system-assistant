@@ -1,7 +1,7 @@
 from fs_tools import read_file, list_files, search_in_file, write_file
 
-print("AI Resume File Assistant")
-print("------------------------")
+print("AI Resume Assistant")
+print("--------------------")
 
 while True:
 
@@ -10,24 +10,24 @@ while True:
     if user_input == "exit":
         break
 
-    # READ ALL RESUMES
-    elif "resume" in user_input and "read" in user_input:
+
+    # READ RESUMES
+    elif "read" in user_input and "resume" in user_input:
 
         files = list_files("resumes")
 
         for file in files:
-
             path = "resumes/" + file["name"]
+
             data = read_file(path)
 
             if data["success"]:
                 print("\nResume:", file["name"])
                 print(data["content"][:200])
-            else:
-                print("Error reading file")
+
 
     # SEARCH KEYWORD
-    elif "python" in user_input or "java" in user_input or "aws" in user_input:
+    elif "find" in user_input:
 
         keyword = user_input.split()[-1]
 
@@ -43,10 +43,12 @@ while True:
                 print("\nFound in:", file["name"])
                 print(result["matches"])
 
+
     # CREATE SUMMARY
     elif "summary" in user_input:
 
         filename = user_input.split()[-1]
+
         path = "resumes/" + filename
 
         data = read_file(path)
@@ -63,6 +65,7 @@ while True:
 
         else:
             print("File not found")
+
 
     else:
         print("Sorry, I didn't understand.")
